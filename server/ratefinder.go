@@ -39,3 +39,10 @@ func (srv *Server) GetRate(resp http.ResponseWriter, req *http.Request) {
 		return
 	}
 }
+
+func (srv *Server) Health(resp http.ResponseWriter, req *http.Request) {
+	_, err := resp.Write([]byte("Success   comes with a price"))
+	if err != nil {
+		return
+	}
+}
