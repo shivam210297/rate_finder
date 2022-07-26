@@ -1,4 +1,5 @@
 FROM golang:alpine as rate-finder
+RUN apk add git
 ENV GO111MODULE=on
 WORKDIR /server
 COPY go.mod /server/
