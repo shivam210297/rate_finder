@@ -19,7 +19,7 @@ jobs:
         run: |-
           if [[ "${{github.base_ref}}" == "main" || "${{github.ref}}" == "refs/heads/main" ]]; then
              echo "GKE_CLUSTER=user-microservice" >> "$GITHUB_ENV"
-             echo "DEPLOYMENT_NAME=rate-finder" >> "$GITHUB_ENV"
+             echo "DEPLOYMENT_NAME=rate-finder-server" >> "$GITHUB_ENV"
              echo "CONTAINER_NAME=rate-finder" >> "$GITHUB_ENV"
              echo "GKE_ZONE=us-central1-a" >> "$GITHUB_ENV"
           fi
