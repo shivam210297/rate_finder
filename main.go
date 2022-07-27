@@ -13,6 +13,7 @@ func main() {
 	done := make(chan os.Signal, 1)
 	signal.Notify(done, os.Interrupt, syscall.SIGINT, syscall.SIGTERM)
 
+	logrus.Info(os.Getenv("PORT"))
 	srv := server.SrvInit()
 	go srv.Start()
 
